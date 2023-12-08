@@ -1,12 +1,37 @@
-import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../../components/EditScreenInfo';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
+import { login, logout } from '../../store/userSlice';
+import { StyleSheet, Button } from 'react-native';
 import { Text, View } from '../../components/Themed';
+import EditScreenInfo from '../../components/EditScreenInfo';
 
 export default function TabOneScreen() {
+  const dispatch = useDispatch();
+  const { isAuthenticated, username } = useSelector((state: RootState) => state.user);
+
+  const handleLogin = () => {
+    dispatch(login('exampleUser'));
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <View>
+      {isAuthenticated ? (
+        <View>
+          <Text style={styles.title}>Welcome, {username}!</Text>
+          <Button title="Logout" onPress={handleLogout} />
+        </View>
+      ) : (
+        <View>
+          <Text style={styles.title}>Please log in</Text>
+          <Button  title="Login" onPress={handleLogin} />
+        </View>
+      )}
+    </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="app/(tabs)/index.tsx" />
     </View>
