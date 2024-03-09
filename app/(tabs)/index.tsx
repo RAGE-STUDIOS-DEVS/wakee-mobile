@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store/store';
-import { login, logout } from '../../store/userSlice';
+import { RootState } from '../../state mgt/store/store';
+import { login, logout } from '../../state mgt/slices/userSlice';
 import { StyleSheet, Button } from 'react-native';
 import { Text, View } from '../../components/Themed';
 import EditScreenInfo from '../../components/EditScreenInfo';
