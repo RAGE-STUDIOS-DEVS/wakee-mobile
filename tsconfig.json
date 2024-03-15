@@ -1,13 +1,18 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
     "strict": true,
+    "esModuleInterop": true
   },
   "include": [
+    "src/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "app.config.js"  
+    "app.config.js"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

@@ -1,18 +1,19 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../state mgt/store/store';
-import { login, logout } from '../../state mgt/slices/userSlice';
+import { RootState } from '../../state_mgt/store/store';
+import { login, logout } from '../../state_mgt/slices/userSlice';
 import { StyleSheet, Button } from 'react-native';
 import { Text, View } from '../../components/Themed';
 import EditScreenInfo from '../../components/EditScreenInfo';
+import SignInWithOAuth from '../../components/SingInWithOAuth';
 
 export default function TabOneScreen() {
   const dispatch = useDispatch();
   const { isAuthenticated, username } = useSelector((state: RootState) => state.user);
 
-  const handleLogin = () => {
-    dispatch(login('exampleUser'));
-  };
+  // const handleLogin = () => {
+  //   dispatch(login('exampleUser'));
+  // };
 
   const handleLogout = () => {
     dispatch(logout());
@@ -27,8 +28,7 @@ export default function TabOneScreen() {
         </View>
       ) : (
         <View>
-          <Text style={styles.title}>Please log in</Text>
-          <Button  title="Login" onPress={handleLogin} />
+          <SignInWithOAuth />
         </View>
       )}
     </View>
