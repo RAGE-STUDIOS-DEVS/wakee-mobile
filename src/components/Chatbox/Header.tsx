@@ -7,6 +7,14 @@ type HeaderProps = {
   navigation?: any;
   customStyles?: any;
 };
+// ===========================================================================
+// ===========================================================================
+// ===========================================================================
+// I started creating the BotInfo component in the header. So I need to move 
+// it into its own component. The header should just be a container mostly. 
+// ===========================================================================
+// ===========================================================================
+// ===========================================================================
 
 const Header: React.FC<HeaderProps> = ({ navigation, name, customStyles }) => {
   // Your header component code here
