@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
+import BotInfo from './BotInfo';
 
 type HeaderProps = {
   name: string;
@@ -34,12 +35,7 @@ const Header: React.FC<HeaderProps> = ({ navigation, name, customStyles }) => {
           />
         </Svg>
       
-        {/* <View style={{ width: 40, height: 40, borderRadius: 20, backgroundColor: 'lightgray' }} />
-        <Text style={{ marginLeft: 10 }}>Header</Text> */}
-      
-      
-        <View style={{ width: 40, height: 40, borderRadius: 20, backgroundColor: 'lightgray', alignSelf: 'center' }} />
-        <Text style={{ marginLeft: 10, alignSelf: 'center' }}>Header</Text>
+      <BotInfo name="My Bot" description="This is my bot"/>
       
      </View>
     </View>
