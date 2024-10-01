@@ -18,7 +18,7 @@ const AppRootRouter = () => {
         name="Chatbox" 
         component={Chatbox} 
         options={{
-          headerTitle: () => <Header name="Chatbox" />
+          header: () => <Header name="Chatbox" />
           }}/>
           
       </Stack.Navigator>

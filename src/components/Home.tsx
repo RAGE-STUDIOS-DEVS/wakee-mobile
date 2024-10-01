@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StatusBar } from "react-native";
 import SignInWithOAuth from "./SingInWithOAuth";
 import { Image } from "react-native";
 import { StyleSheet, Button } from "react-native";

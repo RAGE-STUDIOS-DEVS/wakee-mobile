@@ -16,7 +16,7 @@ const BotInfo = ({ name, description }: BotInfoProps) => { // ({ name, descripti
       
       
         <View style={{ width: 40, height: 40, borderRadius: 20, backgroundColor: 'lightgray', alignSelf: 'center' }} />
-        <Text style={{ marginLeft: 10, alignSelf: 'center' }}>Bot name.</Text>
+        <Text style={{ marginLeft: 10, alignSelf: 'center' }}>Bot name</Text>
     </View>
   );
 };

@@ -30,6 +30,7 @@ const Footer = () => {
             borderColor: 'gray',
             borderWidth: 1,
             padding: 10,
+            borderRadius: 5,
           }}
           onChangeText={() => {}}
         />
@@ -47,6 +48,8 @@ const styles = StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     height: 150,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
   },
   text: {
     fontSize: 16,
